@@ -40,6 +40,9 @@ dependencies:
   carousel_pro: ^1.0.0
   url_launcher: ^6.1.10
   firebase_storage: ^11.0.15
+  firebase_auth: ^4.2.10
+  google_sign_in: ^6.0.2
+  lottie: ^2.2.0
 
 dev_dependencies:
   flutter_test:

@@ -1,5 +1,8 @@
 import 'package:all_mu/screen/collage_selecting_screen.dart';
-import 'package:all_mu/screen/image_slider.dart';
+import 'package:all_mu/screen/home_Screen.dart';
+
+import 'package:all_mu/splash_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 import 'package:firebase_core/firebase_core.dart';
 
@@ -11,6 +14,15 @@ void main() async {
 
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: CollageSelectingScreen(),
+    home: StreamBuilder<User?>(
+      stream: FirebaseAuth.instance.authStateChanges(),
+      builder: ((context, snapshot) {
+        if (snapshot.hasData) {
+          return const CollageSelectingScreen();
+        } else {
+          return const AuthSplashScreen();
+        }
+      }),
+    ),
   ));
 }

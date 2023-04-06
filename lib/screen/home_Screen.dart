@@ -24,37 +24,38 @@ class HomeScreen extends StatelessWidget {
             children: [
               imageCrouser(),
               GridView.count(
-                  crossAxisCount: 2,
-                  primary: false,
-                  mainAxisSpacing: 1,
-                  crossAxisSpacing: 1,
-                  shrinkWrap: true,
-                  children: [
-                    CommonCard(
-                      title: '${college['contact']}',
-                      imageofCard: '${college['imgs']}',
-                      onTap: () {},
-                    ),
-                    CommonCard(
-                      title: '${college['semester']}',
-                      imageofCard: '${college['imgs']}',
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => Semester(college)));
-                      },
-                    ),
-                    CommonCard(
-                      title: '${college['syllabus']}',
-                      imageofCard: '${college['imgs']}',
-                    ),
-                    CommonCard(
-                      title: '${college['name']}',
-                      imageofCard: '${college['imgs']}',
-                      onTap: () {},
-                    ),
-                  ])
+                crossAxisCount: 2,
+                primary: false,
+                mainAxisSpacing: 1,
+                crossAxisSpacing: 1,
+                shrinkWrap: true,
+                children: [
+                  CommonCard(
+                    title: '${college['contact']}',
+                    imageofCard: '${college['imgs']}',
+                    onTap: () {},
+                  ),
+                  CommonCard(
+                    title: '${college['semester']}',
+                    imageofCard: '${college['imgs']}',
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Semester(college)));
+                    },
+                  ),
+                  CommonCard(
+                    title: '${college['syllabus']}',
+                    imageofCard: '${college['imgs']}',
+                  ),
+                  CommonCard(
+                    title: '${college['name']}',
+                    imageofCard: '${college['imgs']}',
+                    onTap: () {},
+                  ),
+                ],
+              )
             ],
           ),
         ),

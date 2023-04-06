@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 
 import '../screen/home_Screen.dart';
 
-class MovieListScreen extends StatelessWidget {
+class CommonStream extends StatelessWidget {
   final Stream<QuerySnapshot> stream;
   final String hint;
-  const MovieListScreen({super.key, required this.stream, required this.hint});
+  const CommonStream({super.key, required this.stream, required this.hint});
 
   @override
   Widget build(BuildContext context) {
